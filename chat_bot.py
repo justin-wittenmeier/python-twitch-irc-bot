@@ -7,10 +7,11 @@ class ChatBot:
         self.__username="SET USERNAME" # Bot username
         self.__target_channel="SET CHANNEl" # Channel to join
         self.__token=os.environ.get("OAUTH") # Get Oauth for Twitch
+        self.__color = "CadetBlue"
         self.__encode="utf-8"
         self.__twitch_socket=self.__connect()
-        self.send_message("/color CadetBlue")
-        self.send_message("/me Connected.")
+        self.send_message(f"/color {self.__color}") # Set bot color.
+        self.send_message("/me Connected.") # Notify chat bot has connected
 
     def __connect(self):
         logging.info("opening socket...")
