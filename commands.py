@@ -27,6 +27,7 @@ class Commands():
 
     # Checks chat message for command and returns False if unable to find a command.
     def command(self, msg):
+        logging.info(f"{msg.user}:{msg.message}")
         self.__target_message=msg.message
         self.__target_user=msg.user
         try:
