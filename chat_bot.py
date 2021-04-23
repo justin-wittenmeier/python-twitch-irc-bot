@@ -10,8 +10,8 @@ class ChatBot:
         self.__color = "CadetBlue"
         self.__encode="utf-8"
         self.__twitch_socket=self.__connect()
-        self.send_message(f"/color {self.__color}") # Set bot color.
-        self.send_message("/me Connected.") # Notify chat bot has connected
+        self.send_message(f"/color {self.__color}") # Set bot color
+        self.send_message("/me Connected.") # Notify chat that the bot has connected
 
     def __connect(self):
         logging.info("opening socket...")
